@@ -45,3 +45,15 @@ ffi:
 
 .PHONY: bin test clean write_config
 
+example_node_install:
+	cd examples/node && npm install
+
+example_node_test: example_node_install
+	cd examples/node && npm run test
+example_node_test_consumer: example_node_install
+	cd examples/node && npm run test:consumer
+example_node_test_provider: example_node_install
+	cd examples/node && npm run test:provider
+
+test_ci_local:
+	act --container-architecture linux/amd64 --job test
