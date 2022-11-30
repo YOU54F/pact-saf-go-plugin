@@ -8,7 +8,7 @@ import (
 	"log"
 	"net"
 
-	plugin "github.com/pact-foundation/pact-plugin-template-golang/io_pact_plugin"
+	plugin "github.com/YOU54F/pact-saf-go-plugin/io_pact_plugin"
 	"google.golang.org/grpc"
 )
 

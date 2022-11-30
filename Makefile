@@ -4,7 +4,7 @@ FFI_VERSION=0.3.15
 # Update this version
 VERSION=0.0.1
 # Update to your project name
-PROJECT=myplugin
+PROJECT=saf-go
 
 ci:: deps clean bin test
 
