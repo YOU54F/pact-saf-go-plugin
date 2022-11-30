@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"log"
 
+	plugin "github.com/YOU54F/pact-saf-go-plugin/io_pact_plugin"
 	"github.com/google/uuid"
-	plugin "github.com/pact-foundation/YOU54F/pact-saf-go-plugin/io_pact_plugin"
 	"google.golang.org/protobuf/types/known/emptypb"
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
