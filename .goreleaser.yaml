@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
+# This is an example .goreleaser.yml file with some sensible defaults.
+# Make sure to check the documentation at https://goreleaser.com
+before:
+  hooks:
+    # You may remove this if you don't use go modules.
+    - go mod tidy
+    - make write_config
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+release: 
+  extra_files:
+    - glob: ./pact-plugin.json
+archives:
+  - replacements:
+      darwin: osx
+      linux: linux
+      windows: windows
+      amd64: x86_64
+      arm64: aarch64
+    name_template: "{{ .ProjectName }}-{{ .Os }}-{{ .Arch }}{{ .ArtifactExt }}"
+    format: gz
+    files:
+      - none*
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ incpatch .Version }}-snap"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+      - '^wip:'
+      - '^chore:'
+
+# modelines, feel free to remove those if you don't want/use them:
+# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
+# vim: set ts=2 sw=2 tw=0 fo=cnqoj

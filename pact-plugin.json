@@ -1,0 +1,11 @@
+{
+  "pluginInterfaceVersion": 1,
+  "name": "myplugin",
+  "version": "0.0.1",
+  "executableType": "exec",
+  "minimumRequiredVersion": null,
+  "entryPoint": "myplugin",
+  "entryPoints": {},
+  "dependencies": null,
+  "pluginConfig": {}
+}
