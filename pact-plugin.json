@@ -1,10 +1,10 @@
 {
   "pluginInterfaceVersion": 1,
-  "name": "myplugin",
+  "name": "saf-go",
   "version": "0.0.1",
   "executableType": "exec",
   "minimumRequiredVersion": null,
-  "entryPoint": "myplugin",
+  "entryPoint": "saf-go",
   "entryPoints": {},
   "dependencies": null,
   "pluginConfig": {}
